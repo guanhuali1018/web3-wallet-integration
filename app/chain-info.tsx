@@ -1,7 +1,7 @@
 "use client";
 
 import { useAccount, useChainId, useSwitchChain } from "wagmi";
-import { mainnet, sepolia } from "wagmi/chains";
+import { mainnet, sepolia, polygon } from "wagmi/chains";
 
 export function ChainInfo() {
   const { isConnected } = useAccount();
@@ -32,6 +32,13 @@ export function ChainInfo() {
           name: "Sepolia Testnet",
           color: "text-emerald-600",
           bgColor: "bg-emerald-50",
+          id: chainId,
+        };
+      case polygon.id:
+        return {
+          name: "Polygon Mainnet",
+          color: "text-purple-600",
+          bgColor: "bg-purple-50",
           id: chainId,
         };
       default:
@@ -65,14 +72,14 @@ export function ChainInfo() {
           <div className="text-sm text-slate-600 font-medium">
             Switch Network:
           </div>
-          <div className="flex gap-2 justify-center">
+          <div className="flex flex-wrap gap-2 justify-center">
             {chainId !== mainnet.id && (
               <button
                 onClick={() => switchChain({ chainId: mainnet.id })}
                 disabled={isPending}
                 className="px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg text-sm hover:from-blue-600 hover:to-blue-700 disabled:from-slate-400 disabled:to-slate-500 transition-all duration-200 shadow-md hover:shadow-lg font-medium"
               >
-                {isPending ? "Switching..." : "Mainnet"}
+                {isPending ? "Switching..." : "Ethereum"}
               </button>
             )}
             {chainId !== sepolia.id && (
@@ -81,7 +88,16 @@ export function ChainInfo() {
                 disabled={isPending}
                 className="px-4 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white rounded-lg text-sm hover:from-emerald-600 hover:to-emerald-700 disabled:from-slate-400 disabled:to-slate-500 transition-all duration-200 shadow-md hover:shadow-lg font-medium"
               >
-                {isPending ? "Switching..." : "Testnet"}
+                {isPending ? "Switching..." : "Sepolia"}
+              </button>
+            )}
+            {chainId !== polygon.id && (
+              <button
+                onClick={() => switchChain({ chainId: polygon.id })}
+                disabled={isPending}
+                className="px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg text-sm hover:from-purple-600 hover:to-purple-700 disabled:from-slate-400 disabled:to-slate-500 transition-all duration-200 shadow-md hover:shadow-lg font-medium"
+              >
+                {isPending ? "Switching..." : "Polygon"}
               </button>
             )}
           </div>
