@@ -4,7 +4,7 @@ A modern, full-featured Web3 wallet application built with Next.js, demonstratin
 
 ## 🚀 Live Demo
 
-[View Live Application](https://web3-wallet-psi.vercel.app/) _(Replace with your actual deployment URL)_
+[View Live Application](https://web3-wallet-psi.vercel.app/)
 
 ## 📱 Features
 
