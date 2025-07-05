@@ -149,9 +149,9 @@ npx vercel --prod
 
 **Chris Li** - _Full-Stack & Web3 Developer_
 
-- Email: [your.email@example.com](mailto:chirs.xtree@gmail.com)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/a-chris-li/)
-- GitHub: [Your GitHub Profile](https://github.com/guanhuali1018)
+- Email: [Gmail](mailto:chirs.xtree@gmail.com)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/a-chris-li/)
+- GitHub: [GitHub](https://github.com/guanhuali1018)
 
 ---
 
